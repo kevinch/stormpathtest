@@ -9,6 +9,7 @@
   "author": "kevinch",
   "license": "ISC",
   "dependencies": {
+    "angular-ui-router": "^0.4.2",
     "stormpath-sdk-angularjs": "^2.0.0"
   }
 }

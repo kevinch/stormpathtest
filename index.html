@@ -4,12 +4,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
         <script src="node_modules/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.min.js"></script>
         <script src="node_modules/stormpath-sdk-angularjs/dist/stormpath-sdk-angularjs.tpls.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="index.js"></script>
     </head>
 
     <body>
         <div ng-controller="appController as app">
             <h1>{{app.title}}</h1>
+
+            <a ui-sref="hello" ui-sref-active="active">Hello</a>
+            <a ui-sref="about" ui-sref-active="active">About</a>
+
+            <ui-view></ui-view>
         </div>
     </body>
 </html>
