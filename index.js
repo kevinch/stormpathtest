@@ -5,18 +5,21 @@ angular.module('app', ['ui.router'])
     })
     .config(function($stateProvider) {
         // Routes
-        var helloState = {
-            name: 'hello',
-            url: '/hello',
-            templateUrl: 'hello.html'
-        }
+        $stateProvider.state('about', {
+                url: '/about',
+                templateUrl: 'about.html'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'login.html'
+            });
 
-        var aboutState = {
-            name: 'about',
-            url: '/about',
-            templateUrl: 'about.html'
-        }
-
-        $stateProvider.state(helloState);
-        $stateProvider.state(aboutState);
-    });
+        // Specify your Client API domain here:
+        //STORMPATH_CONFIG.ENDPOINT_PREFIX = 'https://ready-stream.apps.stormpath.io';
+    });/*
+    .run(function($stormpath) {
+        $stormpath.uiRouter({
+            loginState: 'login',
+            defaultPostLoginState: 'home'
+        });
+    });*/
